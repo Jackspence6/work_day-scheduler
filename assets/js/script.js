@@ -13,8 +13,8 @@ var now = $("#currentDay");
 // Function to display date & time
 function dateDisplay() {
   var rightNow = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-  now.text(rightNow);  
-};
+  now.text(rightNow);
+}
 
 /******************************************/
 /* Event listeners */
