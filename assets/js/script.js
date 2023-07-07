@@ -8,6 +8,7 @@ var tableHour = $(".time");
 /* Global variables and constants */
 /******************************************/
 var hourNow;
+
 /******************************************/
 /* Function and class declarations */
 /******************************************/

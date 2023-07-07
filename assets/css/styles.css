@@ -25,6 +25,10 @@
   border-left: 1px solid white;
   border-right: 1px solid white;
 }
+
+.save {
+  margin-left: 3px;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
