@@ -98,6 +98,21 @@ addEventBtn.on("click", function () {
   $(".event-data").val("");
 });
 
+// Button to delete user input events from local storage
+$(trashBtn).on("click", function () {
+  var currentTrashBtn = $(this);
+  var currentRow = currentTrashBtn.closest("tr");
+  var rowId = currentRow.attr("id");
+
+  // Remove the corresponding entry from the events object
+  delete events[rowId];
+
+  // Update local storage with the updated events object
+  localStorage.setItem("events", JSON.stringify(events));
+
+  // Clear the text in the middle cell of the row
+  currentRow.find(".middle").text("");
+});
 /******************************************/
 /* Document manipulation */
 /******************************************/
