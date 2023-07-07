@@ -6,12 +6,14 @@ var tableHour = $(".time");
 var addBtn = $(".add");
 var addEventBtn = $(".add-event");
 var modalEl = $("#myModal");
+var saveBtn = $(".fa-save");
 
 /******************************************/
 /* Global variables and constants */
 /******************************************/
 var hourNow;
 var middleRow;
+var userInput;
 
 /******************************************/
 /* Function and class declarations */
@@ -54,7 +56,7 @@ addBtn.on("click", function () {
 
 // Add event to corresponding row
 addEventBtn.on("click", function () {
-  var userInput = $(".event-data").val();
+  userInput = $(".event-data").val();
   console.log(userInput);
   middleRow.text(userInput);
 
@@ -64,6 +66,7 @@ addEventBtn.on("click", function () {
   // Clear event data
   $(".event-data").val("");
 });
+
 /******************************************/
 /* Document manipulation */
 /******************************************/
