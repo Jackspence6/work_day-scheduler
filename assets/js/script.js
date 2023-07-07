@@ -3,6 +3,8 @@
 /******************************************/
 var now = $("#currentDay");
 var tableHour = $(".time");
+var addBtn = $(".add");
+var modalEl = $("#myModal");
 
 /******************************************/
 /* Global variables and constants */
@@ -39,7 +41,9 @@ rowColor();
 /******************************************/
 /* Event listeners */
 /******************************************/
-
+addBtn.on("click", function () {
+  modalEl.modal("show");
+});
 /******************************************/
 /* Document manipulation */
 /******************************************/
