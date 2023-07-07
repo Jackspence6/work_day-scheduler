@@ -6,7 +6,7 @@ var tableHour = $(".time");
 var addBtn = $(".add");
 var addEventBtn = $(".add-event");
 var modalEl = $("#myModal");
-var saveBtn = $(".fa-save");
+var trashBtn = $(".trash");
 
 /******************************************/
 /* Global variables and constants */
