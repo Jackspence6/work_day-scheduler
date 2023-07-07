@@ -25,7 +25,11 @@ function rowColor() {
     console.log(rowHour);
 
     if (rowHour === hourNow) {
-      $(this).find("td.middle").css("background-color", "red");
+      $(this).find("td.middle").css("background-color", "hsl(0 100% 60%)");
+    } else if (rowHour < hourNow) {
+      $(this).find("td.middle").css("background-color", "LightGray");
+    } else {
+      $(this).find("td.middle").css("background-color", "hsl(145 100% 50%)");
     }
   });
 }
