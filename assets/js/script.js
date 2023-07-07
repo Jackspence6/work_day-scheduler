@@ -4,12 +4,14 @@
 var now = $("#currentDay");
 var tableHour = $(".time");
 var addBtn = $(".add");
+var addEventBtn = $(".add-event");
 var modalEl = $("#myModal");
 
 /******************************************/
 /* Global variables and constants */
 /******************************************/
 var hourNow;
+var middleRow;
 
 /******************************************/
 /* Function and class declarations */
@@ -41,8 +43,26 @@ rowColor();
 /******************************************/
 /* Event listeners */
 /******************************************/
+// Open modal dialog to input event data
 addBtn.on("click", function () {
+  var currentAddBtn = $(this);
+  var currentRow = currentAddBtn.closest("tr");
+  middleRow = currentRow.find(".middle");
+
   modalEl.modal("show");
+});
+
+// Add event to corresponding row
+addEventBtn.on("click", function () {
+  var userInput = $(".event-data").val();
+  console.log(userInput);
+  middleRow.text(userInput);
+
+  // Hide modal dialog when event is submitted
+  modalEl.modal("hide");
+
+  // Clear event data
+  $(".event-data").val("");
 });
 /******************************************/
 /* Document manipulation */
