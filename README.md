@@ -1,6 +1,6 @@
 # Third-Party APIs: Work Day Scheduler
 
-## View Live Web Application
+## View Live Web Application:
 https://jackspence6.github.io/work_day-scheduler/
 
 ## Your Task
